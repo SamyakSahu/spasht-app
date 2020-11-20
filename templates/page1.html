@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="./static/style.css"> -->
+</head>
+
+<body>
+    <div class="languageSelector">
+        <div class="languageLabelContainer">
+            <a href=""><div class="languageLabel">EN</div></a>
+            <a href=""><div class="languageLabel">HI</div></a>
+        </div>
+        <div class="languageTypography">Select Language</div>
+    </div>
+    <div class="centralContainer">
+        <div class="videoContainer">
+            <video id="feed" controls height="100%" width="100%"><source id="source"/></video>
+        </div>
+    </div>
+</body>
+</html>
