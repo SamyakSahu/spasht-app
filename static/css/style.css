@@ -1,151 +1,149 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+body, body * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size:18px;
     font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
 }
 
-body{
+.centeredFlex {
     display: flex;
-    width: 100vw;
     justify-content: center;
     align-items: center;
+}
+
+.centeredFlex>* {
+    display: block;
+}
+
+.rowFlex {
+    flex-direction: row;
+}
+
+.columnFlex {
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px 40px;
+    max-width: 40vw;
+    text-align: center;
+}
+
+.red {
+    background: #FF8888;
+}
+
+.green {
+    background: #C2EF9E;
+}
+
+.darkgray {
+    background: #C4C4C4;
+}
+
+.lightgray {
+    background: #E5E5E5;
+}
+
+.lightred {
+    background: #FFAFAF 45%;
+}
+
+h1 {
+    font-weight: 700;
+    display: block;
+}
+
+h2 {
+    font-weight: 500;
+    display: block;
+}
+
+h3 {
+    font-weight: 300;
+    display: block;
 }
 
 .languageSelector {
-    background-color: #E5E5E5;
-    padding: 55px 47px 45px 47px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    right: 10vw;
+    top: 10vh;
+    width: 10vw;
+    height: 10vh
 }
 
-.languageLabelContainer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "heading heading" "selector1 selector2";
+    text-align: center;
+    border: 1px solid black;
 }
 
-.languageLabel {
-    width: 45px;
-    height: 45px;
-    font-family: 'Roboto' , sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #C4C4C4;
-    margin: 0 10.5px 0 10.5px;
-    margin-bottom: 21px;
+.grid-container div {
+    border-radius: 0;
 }
 
-.languageTypography{
-    display:flex;
-    justify-content: center;
-    align-items:center;
+.heading {
+    grid-area: heading;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
 }
 
-.centralContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.selector1 {
+    grid-area: selector1;
+    border-right: 1px solid black;
 }
 
-.videoContainer{
-    width:640px;
-    height:480px;
-    background-color: #C4C4C4;
-    margin-bottom: 21px;
+.selector2 {
+    grid-area: selector2;
 }
 
-.videoActionButton{
-    padding:22px 55px;
-}
-.videoActionButtonSmall{
-    padding:12px 45px;
+.choose {
+    margin-top: 100px;
+    padding: 10px 30px;
 }
 
-.green{
+.choose::-webkit-file-upload-button {
+    display: inline-block;
+    background: #c4c4c4;
+    border: none;
+    padding: 7px 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.warningBox {
+    display: none;
+    padding: 10px;
+    transform: translateY(-150px);
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+}
+
+.imageContainer {
+    width: 80vh;
+    height: 60vh;
+    margin-top: 30px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+progress[value]::-webkit-progress-value {
     background-color: #C2EF9E;
-    font-size:18px;
-    line-height:21px;
-}
-
-.red{
-    background-color: #ED7B7B;
-    font-size: 28px;
-    line-height: 33px;
-}
-
-.extraButton{
-    position: absolute;
-    bottom:10px;
-    right:10px;
-}
-
-.reportGenerationBox{
-    position: absolute;
-    bottom:10px;
-    left:10px;
-    width:400px;
-    padding:10px 0;
-    background-color: #E5E5E5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.bloodCellTableContainer{
-    display:flex;
-    flex-direction: column;
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-}
-
-.key{
-    width:20px;
-    height:20px;
-    background-color: white;
-    margin: 10px 20px;
-}
-
-.value{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rbc{
-    background-color: #FF0303;
-}
-
-.wbc{
-    background-color: #02FF1B;
-}
-
-.epi{
-    background-color: #05C3FF;
-}
-
-.reportGenerationControl{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-bottom: -10px;
+    border-radius: 10px;
 }
