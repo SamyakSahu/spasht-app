@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload new file</title>
+    <link rel="stylesheet" media="screen" href = "{{ url_for('static', filename='css/style.css') }}">
+    <!-- insert the CSS file over here, avoid disturbing the file above -->
+</head>
+<body>
+    <h1>🎞 Upload a video</h1><br>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+</body>
+</html>

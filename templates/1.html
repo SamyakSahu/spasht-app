@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Get Started</title>
+</head>
+
+<body>
+    <div class="languageSelector">
+        <div class="grid-container lightgray">
+            <div class="heading">Select Language</div>
+            <div class="selector1 centeredFlex">EN</div>
+            <div class="selector2 centeredFlex">HI</div>
+        </div>
+    </div>
+    <div class="centeredFlex columnFlex" style="height:100vh">
+        <h1>Hello! Welcome to the Web App</h1>
+        <h2>Click the button below to get started<br />&nbsp;</h2>
+        <h3>Upload a photo/video file from your microscope and let the AI predict the number and types of cells present.<br>To know more, have a look at the <a href="{{ url_for('about') }}">About</a> section.</h3>
+        <form action="{{ url_for('menu') }}">
+            <button class="button green" type="submit">Get Started!</div>
+        </form>
+    </div>
+</body>
+
+</html>

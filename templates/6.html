@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Cells detected</title>
+</head>
+
+<body>
+    <div class="languageSelector">
+        <div class="grid-container lightgray">
+            <div class="heading">Select Language</div>
+            <div class="selector1 centeredFlex">EN</div>
+            <div class="selector2 centeredFlex">HI</div>
+        </div>
+    </div>
+    <div class="centeredFlex columnFlex" style="height:100vh">
+        <h1>Cell detection results</h1>
+        <h3>Some description</h3>
+        <div class="imageContainer lightgray">
+            <img src="../static/Detector/Data/Source_Images/Test_Image_Detection_Results/10_cells.jpg" height="100%" width="100%">
+        </div>
+
+        <div class="button green" style="margin-top: 20px;">Generate diagnosis report</div>
+    </div>
+</body>
+
+</html>

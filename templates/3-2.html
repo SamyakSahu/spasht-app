@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Spasht - Upload a video</title>
+</head>
+
+<body style="overflow-y: hidden;">
+
+    <div class="languageSelector">
+        <div class="grid-container lightgray">
+            <div class="heading">Select Language</div>
+            <div class="selector1 centeredFlex">EN</div>
+            <div class="selector2 centeredFlex">HI</div>
+        </div>
+    </div>
+ 
+    <div class="centeredFlex columnFlex" style="height:100vh">
+        <h1>🎥 Upload a video</h1><br>
+        <form method=post enctype=multipart/form-data>
+          <input type=file name=file>
+          <input type=submit value=Upload>
+        </form>
+    </div>
+
+    
+    <!-- <div class="lightred warningBox">⚠ Text for warnings and remarks about video quality:
+        bound in a light red box or something...</div>
+    <script>
+        document.getElementsByClassName('button')[0]
+        .addEventListener('click', function (event) {
+            document.getElementsByClassName('warningBox')[0].style.display = "block";
+        });
+    </script> -->
+</body>
+
+</html>

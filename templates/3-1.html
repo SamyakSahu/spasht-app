@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Image Selector</title>
+</head>
+
+<body style="overflow-y: hidden;">
+    <div class="languageSelector">
+        <div class="grid-container lightgray">
+            <div class="heading">Select Language</div>
+            <div class="selector1 centeredFlex">EN</div>
+            <div class="selector2 centeredFlex">HI</div>
+        </div>
+    </div>
+
+    <div class="centeredFlex columnFlex" style="height:100vh">
+        <h1>🌆 Upload a Sharp Image</h1>
+        <form action = "{{ url_for('frame') }}" method = "POST" enctype = "multipart/form-data">
+            <input type="file" multiple class="choose lightgray" name="file">
+
+            <button class="button green" style="margin-top:30px" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="lightred warningBox">⚠ Text for warnings and remarks about photo quality:
+        bound in a light red box or something...</div>
+    <script>
+        document.getElementsByClassName('button')[0]
+        .addEventListener('click', function (event) {
+            document.getElementsByClassName('warningBox')[0].style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

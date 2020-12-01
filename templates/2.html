@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Select Input</title>
+</head>
+
+<body>
+    <div class="languageSelector">
+        <div class="grid-container lightgray">
+            <div class="heading">Select Language</div>
+            <div class="selector1 centeredFlex">EN</div>
+            <div class="selector2 centeredFlex">HI</div>
+        </div>
+    </div>
+    <div class="centeredFlex columnFlex" style="height:100vh">
+        <form action="{{ url_for('image') }}">
+            <button class="button green columnFlex" style="margin-top: 0px;">
+                <h2>🌆 Upload a Sharp Image</h2>
+                <h3><br>If you captured an image from your microscope. Make sure it's clear enough for best results.</h3>
+            </button>
+        </form>
+        <form action="{{ url_for('video') }}">
+            <button class="button green columnFlex">
+                <h2>🎥 Upload a Video feed</h2>
+                <h3><br>Upload a continuous video feed, and we'll extract a sharp frame for you.</h3>
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>
